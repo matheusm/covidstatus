@@ -18,6 +18,8 @@ class MyApp extends StatelessWidget {
       title: 'Flutter Demo',
       theme: ThemeData(
         primarySwatch: Colors.blue,
+        primaryColor: Color(0xffc2cb4a),
+        accentColor: Colors.white 
       ),
       home: MyHomePage(),
     );
@@ -54,8 +56,8 @@ class MyHomePageState extends State<MyHomePage>{
       bottomNavigationBar: BottomNavigationBar(
         selectedItemColor: Color(0xff23B9E8),
         items: [
-          BottomNavigationBarItem(icon: Icon(Icons.public), title: Text('Mundo')),
-          BottomNavigationBarItem(icon: Icon(Icons.list), title: Text('Países')),
+          BottomNavigationBarItem(icon: Icon(Icons.public), title: Text('Alagoas')),
+          BottomNavigationBarItem(icon: Icon(Icons.list), title: Text('Brasil')),
           BottomNavigationBarItem(icon: Icon(Icons.info), title: Text('Sobre')),
         ],
         currentIndex: _selectedIndex,
