@@ -2,10 +2,10 @@ import 'dart:convert';
 import 'package:http/http.dart' as http;
 
 class LatestTotals {
-  final String confirmed;
-  final String recovered;
-  final String critical;
-  final String deaths;
+  final int confirmed;
+  final int recovered;
+  final int critical;
+  final int deaths;
 
   LatestTotals({this.confirmed, this.critical, this.deaths, this.recovered});
 
@@ -24,7 +24,7 @@ Future<LatestTotals> fetchAlbum() async {
       //headers: {HttpHeaders.authorizationHeader: "Basic your_api_token_here"},
       headers: {
         "x-rapidapi-host": "covid-19-data.p.rapidapi.com",
-        "x-rapidapi-key": "YOUR_KEY_HERE"
+        "x-rapidapi-key": ""
       });
   if (response.statusCode == 200) {
     final responseJson = json.decode(response.body);
